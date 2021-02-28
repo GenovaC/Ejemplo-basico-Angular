@@ -1,0 +1,11 @@
+<div class="container">
+    <app-total mensaje="Total por pagar:" [total]="total"></app-total>
+
+    <app-shopping-item 
+        *ngFor="let item of items"
+        (deleteItem)="deleteItem($event)"
+        (toggleItem)="toggleItem($event)"
+        [item] = "item">
+    </app-shopping-item>
+
+</div>
